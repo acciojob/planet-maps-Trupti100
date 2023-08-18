@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System Map</title>
+<style>
+  /* Style for the image container */
+  .image-container {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  /* Style for the clickable areas */
+  .planet-area {
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.3); /* Semi-transparent blue */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .sun-area {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.3); /* Semi-transparent yellow */
+    cursor: pointer;
+  }
+</style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <h1>Solar System Map</h1>
+  <div class="image-container">
+    <img src="https://flatplanet.sourceforge.net/maps/images/PathfinderMap_hires.jpg" alt="Solar System Map" usemap="#solarMap">
+    
+    <map name="solarMap">
+      <!-- Clickable area for Mercury -->
+      <area shape="circle" coords="100,100,30" href="mercury.htm" class="planet-area">
+      
+      <!-- Clickable area for Venus -->
+      <area shape="circle" coords="180,150,35" href="venus.htm" class="planet-area">
+      
+      <!-- Add more clickable areas for other planets here -->
+      <!-- Make sure to adjust coordinates and href attributes accordingly -->
+      
+      <!-- Clickable area for Sun -->
+      <area shape="rect" coords="250,250,350,350" href="sun.htm" class="sun-area">
+    </map>
+  </div>
 </body>
-
 </html>
